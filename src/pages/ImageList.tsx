@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import "./ImageList.scss";
 
 type Cocktail = {
   strDrink: string;
@@ -13,7 +14,7 @@ type Params = {
 };
 
 export default function ImageList() {
-  const [cocktailData, setCocktailData] = useState<Cocktail[]>([]);
+  const [cocktailsData, setCocktailData] = useState<Cocktail[]>([]);
 
   const route_parameter = useParams<Params>();
   //   console.log(route_parameter);
@@ -36,11 +37,13 @@ export default function ImageList() {
 
   return (
     <div className="d-flex flex-wrap justify-content-center">
-      {cocktailData.map((cocktail) => {
+      {cocktailsData.map((cocktail) => {
         return (
-          <div key={cocktail.idDrink} className="mr-3 ml-3">
+          <div key={cocktail.idDrink} className="mr-3 ml-3 list">
             <div>
-              <p>{cocktail.strDrink}</p>
+              <Link to={`/cocktail-info/${cocktail.idDrink}`}>
+                <p>{cocktail.strDrink}</p>
+              </Link>
               <img
                 src={cocktail.strDrinkThumb}
                 style={{ width: 200 }}

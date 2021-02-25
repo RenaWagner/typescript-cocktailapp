@@ -1,0 +1,12 @@
+.list {
+  margin-top: 30px;
+}
+
+p {
+  color: yellowgreen;
+  margin-bottom: 2px;
+
+  &:hover {
+    color: violet;
+  }
+}
