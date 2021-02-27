@@ -38,7 +38,7 @@ export default function SearchPage() {
           return (
             <div className="mr-3">
               <Link to={`/cocktail-info/${item.idDrink}`}>
-                <p>{item.strDrink}</p>
+                <p className="cocktailName">{item.strDrink}</p>
               </Link>
               <img
                 style={{ width: 200 }}

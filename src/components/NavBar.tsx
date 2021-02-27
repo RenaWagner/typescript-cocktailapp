@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./NavBar.scss";
 
 export default function NavBar() {
   return (
-    <div className="mt-5 mb-3">
+    <div className="mt-5 mb-3 div">
       <NavLink
         exact
         to="/"

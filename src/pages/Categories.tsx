@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./Categories.scss";
 
 type Drinks = {
   strCategory: string;
@@ -22,7 +23,7 @@ export default function Categories() {
 
   return (
     <div>
-      <h2>Categories List</h2>
+      <h2 className="mb-3">Categories List</h2>
       <ul className="list-group list-group-flush">
         {drinksData.length ? (
           drinksData.map((drinks, index) => {

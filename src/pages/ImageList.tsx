@@ -42,7 +42,7 @@ export default function ImageList() {
           <div key={cocktail.idDrink} className="mr-3 ml-3 list">
             <div>
               <Link to={`/cocktail-info/${cocktail.idDrink}`}>
-                <p>{cocktail.strDrink}</p>
+                <p className="title">{cocktail.strDrink}</p>
               </Link>
               <img
                 src={cocktail.strDrinkThumb}

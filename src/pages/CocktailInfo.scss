@@ -1,12 +1,49 @@
-h3 {
-  color: yellowgreen;
-}
+@media screen and (max-width: 767px) {
+  /*　画面サイズが767px以下の場合読み込む　*/
+  img {
+    width: 200px;
+    margin: 0;
+  }
+  h3 {
+    color: yellowgreen;
+  }
 
-p {
-  color: black;
-
-  &:hover {
-    text-decoration: none;
+  p {
     color: black;
+
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .description {
+    margin-left: 60px;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /*　画面サイズが768px以上の場合読み込む　*/
+  img {
+    width: 300px;
+    padding: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  h3 {
+    color: yellowgreen;
+  }
+
+  p {
+    color: black;
+
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .description {
+    margin: 30px auto;
+    width: 600px;
   }
 }
